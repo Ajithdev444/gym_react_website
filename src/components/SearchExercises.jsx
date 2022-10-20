@@ -2,6 +2,8 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { Box, Stack, Button, Typography, TextField } from '@mui/material'
 import { exerciseOptions, fetchData} from '../utils/fetchData'
+import HorizontalScrollbar from './HorizontalScrollbar'
+
 
 const SearchExercises = () => {
 
@@ -39,7 +41,7 @@ const SearchExercises = () => {
 
 
   return (
-    <Stack alignItems='center' mt='37px' justifyCenter='center' p='20px'>
+    <Stack alignItems='center' mt='37px' justifycenter='center' p='20px'>
       <Typography fontWeight={700} sx={{fontSize:{ lg :'44px', xs: '30px'}}} mb='50px'
       textAlign='center' >
         Awesome Exercise You <br/> Should Know
@@ -77,6 +79,10 @@ const SearchExercises = () => {
         >
           Search
         </Button>
+
+      </Box>
+      <Box sx={{ position:'relative',width: '100%', p:'20px'}}>
+        <HorizontalScrollbar data={bodyParts}/>
 
       </Box>
 
