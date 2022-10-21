@@ -13,7 +13,7 @@ const ExerciseDetail = () => {
 
   const [exerciseDetail,setExerciseDetail] = useState({});
 
-  const [exerciseVideos,setExerciseVideo] = useState([])
+  const [exerciseVideos,setExerciseVideos] = useState([])
 
   const { id } = useParams();
 
@@ -28,10 +28,10 @@ const ExerciseDetail = () => {
 
       setExerciseDetail(exerciseDetailData)
 
-      const exerciseVideoData = await fetchData(`${youtubeSearchUrl}/search?q=${exerciseDetailData.name}`,
+      const exerciseVideosData = await fetchData(`${youtubeSearchUrl}/search?query=${exerciseDetailData.name}`,
       youtubeOptions)
 
-      setExerciseVideo(exerciseVideoData)
+      setExerciseVideos(exerciseVideosData.contents)
     }
     fetchExercisesData();
   },[id]);
