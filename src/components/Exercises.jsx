@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Pagination } from '@mui/material/Pagination';
-import { Box, Stack, Typography } from '@mui/material';
 
+import { Box, Stack, Typography } from '@mui/material';
+import  Pagination  from '@mui/material/Pagination';
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 import ExerciseCard from './ExerciseCard';
 
@@ -34,9 +34,8 @@ const Exercises = ({ exercises, setExercises, bodyPart}) => {
 
         setExercises(exercisesData);
       }
-
-      {fetchExercisesData};
-    },[bodyPart])
+      fetchExercisesData();
+    },[bodyPart]);
 
   return (
     <Box id='exercises'
@@ -56,7 +55,7 @@ const Exercises = ({ exercises, setExercises, bodyPart}) => {
       </Stack>
       <Stack mt='100px' alignItems='center'>
         {exercises.length > 9 && (
-          <Pagination 
+          <Pagination
           color='standard'
           shape='rounded'
           defaultPage={1}
