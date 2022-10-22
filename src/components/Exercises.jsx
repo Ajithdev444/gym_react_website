@@ -29,7 +29,7 @@ const Exercises = ({ exercises, setExercises, bodyPart}) => {
           ('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);    
         } else {
           exercisesData = await fetchData
-          (`https://exercisedb.p.rapidapi.com/bodyPart/${bodyPart}`, exerciseOptions);
+          (`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
         }
 
         setExercises(exercisesData);
