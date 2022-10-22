@@ -16,11 +16,13 @@ const Home = () => {
       <SearchExercises
                        setExercises={setExercises}
                        bodyPart={bodyPart} 
-                       setBodyPart={setBodyPart}/>
+                       setBodyPart={setBodyPart}
+                       />
       <Exercises
                        setExercises={setExercises}
                        bodyPart={bodyPart} 
-                       exercises={exercises}/>
+                       exercises={exercises}
+                       />
     </Box>
   )
 }
