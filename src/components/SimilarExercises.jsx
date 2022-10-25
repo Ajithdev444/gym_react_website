@@ -9,7 +9,7 @@ const SimilarExercises = ({targetMuscleExercises, equipmentExercises}) => {
       <Typography variant='h3' mb={5}>
         Exercises that target the same muscle group
       </Typography>
-      <Stack sx={{ p:'2', position:'relative'}}>
+      <Stack direction='row' sx={{ p:'2', position:'relative'}}>
           {targetMuscleExercises.length ? <HorizontalScrollbar data={targetMuscleExercises}/>
           : <Loader/>}
       </Stack>
@@ -17,7 +17,7 @@ const SimilarExercises = ({targetMuscleExercises, equipmentExercises}) => {
       <Typography variant='h3' mb={5}>
         Exercises that use the same equipment 
       </Typography>
-      <Stack sx={{ p:'2', position:'relative'}}>
+      <Stack direction='row' sx={{ p:'2', position:'relative'}}>
           {equipmentExercises.length ? <HorizontalScrollbar data={equipmentExercises}/>
           : <Loader/>}
       </Stack>
