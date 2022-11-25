@@ -28,7 +28,7 @@ const HeroBanner = () => {
         </Typography>
         <img src={HeroBannerImage} alt="HeroImage" className='hero-banner-img'/>
     </Box>
-  )
-}
+  );
+};
 
 export default HeroBanner
